@@ -1,46 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Register - TechCon 2024</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register for TechCon 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox {
+      margin: 15px 0;
+    }
+    button[type="submit"] {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      padding-top: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Register for TechCon 2024</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Registration Form</h2>
-      <form action="#" method="post">
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <form action="#" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
 
-        <label for="ticket">Ticket Type:</label><br>
-        <select id="ticket" name="ticket">
-          <option value="standard">Standard</option>
-          <option value="vip">VIP</option>
-          <option value="student">Student</option>
-        </select><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
 
-        <input type="submit" value="Register">
-      </form>
-    </section>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required />
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="terms" required />
+          I agree to the Terms and Conditions.
+        </label>
+      </div>
+
+      <button type="submit">Register Now</button>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2024 TechCon Conference. All rights reserved. Copyright.</p>
+    &copy; 2024 TechCon. All rights reserved. Copyright TechCon 2024.
   </footer>
+
 </body>
 </html>
